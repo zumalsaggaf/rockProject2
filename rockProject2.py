@@ -7,7 +7,7 @@ class Player:
     def move(self):
         return 'rock'
 
-    def learn(self, my_move, their_move):
+    def learn(self, my_move, their_move): 
         pass
 
 
@@ -54,9 +54,9 @@ class CyclerPlayer(Player):  # for having the choices sequenceed
         pass
 
 
-class HumanPlayer:
+class HumanPlayer(Player):
     def move(self):
-        answer = input("Rock, paper, scissors? ")
+        answer = input("Rock, paper, scissors? ").lower()
         while answer not in moves:
             answer = input("Invalid input.\nTry again.")
 
